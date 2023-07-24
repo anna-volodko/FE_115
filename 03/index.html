@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <div class="center_container">
+        <h1>Registration form</h1>
+        <form
+          action="https://jkorpela.fi/cgi-bin/echo.cgi"
+          method="get"
+          target="_blank"
+        >
+          <fieldset>
+            <legend>General information:</legend>
+            <label for="name">Full name:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name and Surname"
+              id="name"
+              required
+            />
+            <br />
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your e-mail"
+              id="email"
+              required
+            />
+            <br />
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Create the password"
+              id="password"
+              required
+            />
+            <br />
+            <label for="password2">Enter your password again:</label>
+            <input
+              type="password"
+              name="password2"
+              placeholder="Enter this password again"
+              id="password2"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Additional information</legend>
+            <label for="birth">The date of birth:</label>
+            <input type="date" required />
+            <p>Your gender:</p>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="gender" value="Male" />
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" value="Female" />
+            <br />
+            <br>
+            <label for="age">Your age:</label>
+            <input type="number" min="18" max="99" required placeholder="18-99" />
+            <br />
+            <p>Choose the course:</p>
+            <select name="course" id="course" required>
+              <option value="FE">Front-end</option>
+              <option value="BE">Back-end</option>
+              <option value="PM">Project Management</option>
+              <option value="QA">QA Manual</option>
+            </select>
+            <br />
+            <p>Enter your address:</p>
+            <textarea
+              name="address"
+              id="address"
+              cols="60"
+              rows="3"
+              placeholder="Enter your address"
+              required
+            ></textarea>
+            <br />
+            <label for="photo">Add photo to your profile</label>
+            <input
+              type="file"
+              name="photo"
+              id="photo"
+              accept=".jpg, .jpeg, .png"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>
+              Help us personalize your reccomendations with this information
+            </legend>
+            <label for="evaluate"
+              >Please, rate your experience on this web-site:</label
+            >
+            <input type="range" name="website_rate" max="10" required />
+            <br />
+            <label for="color">Choose the color:</label>
+            <input type="color" name="color" id="color" required />
+          </fieldset>
+          <fieldset>
+            <legend>Next steps</legend>
+            <label for="agree">I agree with all terms and conditions</label>
+            <input type="checkbox" name="agreement" id="agree" checked />
+            <br />
+            <button type="submit">Sign up</button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
