@@ -73,13 +73,14 @@
 }
 .skills_content {
     margin-top: 50px;
+    font-size: 0;
 }
 .skill_item {
     text-align: center;
     width: 100%;
     max-width: 170px;
     display: inline-block;
-    margin-right: 80px;
+    margin-right: 96px;
 }
 .skill_item:last-child {
     margin-right: 0;
