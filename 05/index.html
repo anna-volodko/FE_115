@@ -17,54 +17,81 @@
     <header class="header">
       <div class="container">
         <h1 class="site_heading">CSS Dinner Shopping List</h1>
-        <h2 class="site_sub_heading">Let’s go to the mall!</h2>
+        <h2 class="site_sub_heading">Let&apos;s go to the mall!</h2>
       </div>
     </header>
     <main class="main">
       <section class="checklist">
         <div class="container">
-          <ul class="shopping_list">
-            <li class="shopping_item">
+          <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+            <ul class="shopping_list">
+              <li class="shopping_item" onclick="addFocus(this)">
                 <input type="checkbox" value="yes" id="checkbox1" />
-                <label for="checkbox1" class="fake_checkbox"></label>
-                <p class="list_text">A lot of pickles <span class="list_text_small">(for the next lessons about CSS)</span></p>
-            </li>
-            <li class="shopping_item">
+                <label for="checkbox1" class="fake_checkbox"
+                  ><span class="text_label"
+                    >A lot of pickles
+                    <span class="list_text_small"
+                      >(for the next lessons about CSS)</span
+                    >
+                  </span>
+                </label>
+              </li>
+              <li class="shopping_item">
                 <input type="checkbox" value="yes" id="checkbox2" />
-                <label for="checkbox2" class="fake_checkbox"></label>
-                <p class="list_text">10 apples <span class="list_text_small">(for more CSS manipulations)</span></p>  
-            </li>
-            <li class="shopping_item">
+                <label for="checkbox2" class="fake_checkbox"
+                  ><span class="text_label"
+                    >10 apples
+                    <span class="list_text_small"
+                      >(for more CSS manipulations)</span
+                    >
+                  </span>
+                </label>
+              </li>
+              <li class="shopping_item">
                 <input type="checkbox" value="yes" id="checkbox3" />
-                <label for="checkbox3" class="fake_checkbox"></label>
-                <p class="list_text">20 oranges <span class="list_text_small"> (because they are awesome)</span></p>  
-            </li>
-            <li class="shopping_item">
+                <label for="checkbox3" class="fake_checkbox"
+                  ><span class="text_label"
+                    >20 oranges
+                    <span class="list_text_small">
+                      (because they are awesome)</span
+                    >
+                  </span>
+                </label>
+              </li>
+              <li class="shopping_item">
                 <input type="checkbox" value="yes" id="checkbox4" />
-                <label for="checkbox4" class="fake_checkbox"></label>
-                <p class="list_text">13 plates <span class="list_text_small"> (hm... they always dissapear)</span></p>  
-            
-            </li>
-            <li class="shopping_item">
+                <label for="checkbox4" class="fake_checkbox"
+                  ><span class="text_label"
+                    >13 plates
+                    <span class="list_text_small">
+                      (hm... they always dissapear)</span
+                    >
+                  </span>
+                </label>
+              </li>
+              <li class="shopping_item">
                 <input type="checkbox" value="yes" id="checkbox5" />
-                <label for="checkbox5" class="fake_checkbox"></label>
-                <p class="list_text">15 bentos</p>  
-            
-            </li>
-            <li class="shopping_item">
+                <label for="checkbox5" class="fake_checkbox"
+                  ><span class="text_label">15 bentos</span></label
+                >
+              </li>
+              <li class="shopping_item">
                 <input type="checkbox" value="yes" id="checkbox6" />
-                <label for="checkbox6" class="fake_checkbox"></label>
-                <p class="list_text">1 bottle of Sake <span class="list_text_small">(for my friends)</span></p>  
-            
-            </li>
-          </ul>
+                <label for="checkbox6" class="fake_checkbox">
+                  <span class="text_label"
+                    >1 bottle of Sake
+                    <span class="list_text_small">(for my friends)</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </form>
         </div>
       </section>
-
       <footer class="footer">
         <div class="container">
           <div footer_button style="text-align: center">
-            <button type="button">Bon appetit :&rpar;</button>
+            <button type="submit">Bon appetit :&rpar;</button>
           </div>
         </div>
       </footer>
