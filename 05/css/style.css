@@ -44,13 +44,16 @@ h1, h2 {
     border-top: 3px solid #ffffff;
     background-color: #625E77;
 }
-.shopping_item:nth-child(even):hover {
-    background-color: #625E77;
-}
 .shopping_item:nth-child(even) {
     background-color: #7A7593;
 }
+.shopping_item:nth-child(even):hover {
+    background-color: #625E77;
+}
 .shopping_item:nth-child(even):active {
+    background-color: #FF8984;
+}
+.shopping_item:nth-child(odd):active {
     background-color: #FF8984;
 }
 .list_text {
