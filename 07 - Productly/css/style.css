@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'Fontawesome';
-    src: url(../fonts/fontawesome/fa-brands-400.ttf) format(ttf),
-    url(../fonts/fontawesome/fa-brands-400.woff2)format(woff2),
-    url(../fonts/fontawesome/fa-regular-400.ttf) format(ttf),
-    url(../fonts/fontawesome/fa-regular-400.woff2) format(woff2),
-    url(../fonts/fontawesome/fa-solid-900.ttf) format(ttf),
-    url(../fonts/fontawesome/fa-solid-900.woff2) format(woff2),
-    url(../fonts/fontawesome/fa-v4compatibility.ttf) format(ttf),
-    url(../fonts/fontawesome/fa-v4compatibility.woff2) format(woff2);
+    src: url(../font/fontawesome/fa-brands-400.ttf) format(ttf),
+    url(../font/fontawesome/fa-brands-400.woff2)format(woff2),
+    url(../font/fontawesome/fa-regular-400.ttf) format(ttf),
+    url(../font/fontawesome/fa-regular-400.woff2) format(woff2),
+    url(../font/fontawesome/fa-solid-900.ttf) format(ttf),
+    url(../font/fontawesome/fa-solid-900.woff2) format(woff2),
+    url(../font/fontawesome/fa-v4compatibility.ttf) format(ttf),
+    url(../font/fontawesome/fa-v4compatibility.woff2) format(woff2);
 }
 @font-face {
     font-family: 'Gotham';
-    src: url(../fonts/gotham/Gotham-Black.otf) format(otf),
-    url(../fonts/gotham/Gotham-Black.ttf) format(ttf),
-    url(../fonts/gotham/Gotham-Black.woff) format(woff);
+    src: url(../font/gotham/Gotham-Black.otf) format(otf),
+    url(../font/gotham/Gotham-Black.ttf) format(ttf),
+    url(../font/gotham/Gotham-Black.woff) format(woff);
 }
 body {
     background-color: #fff;
