@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'icons';
+    src: url(../fonts/weathericons-regular-webfont.ttf) format(ttf),
+    url(../fonts/weathericons-regular-webfont.woff) format(woff),
+    url(../fonts/weathericons-regular-webfont.eot) format(eot);
+}
 * {transition: all .1s ease-in;}
 body, html {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -22,38 +28,72 @@ body {
     width: 100%;
     border: 2px solid white;
 }
+
 .weather_item:nth-child(1) {
     background-color: #3399ccb4;
 }
+.weather_item:nth-child(1):hover {
+    background-color: #3399cc;
+}
 .weather_item:nth-child(2) {
-    background-color: #33ccccbd;
+    background-color: #33cccc96;
+}
+.weather_item:nth-child(2):hover {
+    background-color: #33cccc;
 }
 .weather_item:nth-child(3) {
     background-color: #996699c9;
 }
+.weather_item:nth-child(3):hover {
+    background-color: #996699;
+}
 .weather_item:nth-child(4) {
     background-color: #c24747c4;
+}
+.weather_item:nth-child(4):hover {
+    background-color: #c24747;
 }
 .weather_item:nth-child(5) {
     background-color: #e2664ac4;
 }
+.weather_item:nth-child(5):hover {
+    background-color: #e2664a;
+}
 .weather_item:nth-child(6) {
     background-color: #ffcc66be;
+}
+.weather_item:nth-child(6):hover {
+    background-color: #ffcc66;
 }
 .weather_item:nth-child(7) {
     background-color: #99cc99c2;
 }
+.weather_item:nth-child(7):hover {
+    background-color: #99cc99;
+}
 .weather_item:nth-child(8) {
     background-color: #669999c9;
+}
+.weather_item:nth-child(8):hover {
+    background-color: #669999;
 }
 .weather_item:nth-child(9) {
     background-color: #cc6699bb;
 }
+.weather_item:nth-child(9):hover {
+    background-color: #cc6699;
+}
 .weather_item:nth-child(10) {
     background-color: #339966b9;
 }
+.weather_item:nth-child(10):hover {
+    background-color: #339966;
+}
 .weather_item:nth-child(11) {
     background-color: #666699cb;
+}
+.weather_item:nth-child(11):hover {
+    background-color: #666699;
 }
 
 
