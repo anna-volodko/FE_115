@@ -1,0 +1,117 @@
+body {
+    background-color: #fff;
+    color: #000;
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.header_page {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+.page {
+    display: flex;
+    column-gap: 10px;
+    font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.66px;
+}
+.eng {
+    font-family: 'Tourney', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.88px;
+}
+.logo {
+    max-width: 238px;
+}
+/*HEADING*/
+.heading {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    position: relative;
+    margin-left: 120px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    
+    }
+    .heading::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: -120px;
+        transform: translateY(-50%);
+        height: 8px;
+        width: 100px; /* Довжина лінії */
+        background-color: black; /* Колір лінії */
+    }
+    main {
+        padding-bottom: 70px;
+    }
+    /*GRID*/
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid #BFBFBF;
+        border-bottom: 1px solid #BFBFBF;
+
+    }
+    .card_wrapper {
+        width: 100%;
+        height: 180px;
+        
+    }
+    .card_inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .card_inner:hover .card_front {
+        transform: rotateX(180deg);
+    }
+    .card_inner:hover .card_back {
+        transform: rotateX(0deg);
+    }
+    .card_front, .card_back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease;
+    }
+    .card_front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--logos-gray-bg, #E6E6E6);
+        backface-visibility: hidden;
+        border-radius: 8px;
+    }
+    .card_back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--logos-black-bg, #1A1A1A);
+        transform: rotateX(180deg);
+        backface-visibility: hidden;
+        border-radius: 8px;
+    }
