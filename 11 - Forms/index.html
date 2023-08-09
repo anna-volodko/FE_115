@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Montserrat:wght@400;600;700&family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@700&family=Roboto:wght@400;500&family=Staatliches&family=Tourney:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Montserrat:wght@400;600;700&family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@700&family=Roboto:wght@400;500&family=Staatliches&family=Tourney:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fooooooooorms</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="section1">
+          <div class="section_container">
+            <h2>Create an Account</h2>
+            <form action="#" class="form1">
+              <div class="form_grid">
+                <div class="form_group">
+                  <label for="first_name">First name</label>
+                  <input type="text" id="first_name" name="first_name" />
+                </div>
+                <div class="form_group">
+                  <label for="last_name">Last name</label>
+                  <input type="text" id="last_name" name="last_name" />
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" />
+                <p>We'll never share your email with anyone else.</p>
+              </div>
+              <div class="form1_group_radio">
+                <div class="radio">
+                  <input type="radio" id="male" name="gender" />
+                  <label for="male" class="fake_radio">
+                    <span class="radio_text">Male</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" id="female" name="gender" />
+                  <label for="female" class="fake_radio">
+                    <span class="radio_text">Female</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form_grid">
+                <div class="form_group">
+                  <label for="country">Country</label>
+                  <select name="country" id="country">
+                    <option value="select" disabled selected>Select</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="poland">Poland</option>
+                    <option value="france">France</option>
+                    <option value="spain">Spain</option>
+                    <option value="italy">Italy</option>
+                  </select>
+                </div>
+                <div class="form_group">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" />
+                </div>
+              </div>
+              <div class="form_group">
+                <button type="submit" class="signup_button">Sign up</button>
+              </div>
+            </form>
+            <div class="text">
+              <p>
+                By clicking the 'Sign Up' button, you confirm that you accept
+                our <br /><span><a href="#">Terms of Use</a></span> and
+                <span><a href="#">Privacy Policy</a></span
+                >.
+              </p>
+            </div>
+            <div class="section_footer">
+              <ul class="nav_footer">
+                <li class="footer_option1">
+                  <a href="#">Have an account?</a>
+                </li>
+                <li class="footer_option2">
+                  <a href="#">Log In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="section2">
+          <div class="section_container">
+            <h2>Profile</h2>
+            <form action="#" class="form2">
+              <div class="photo_area">
+                <div class="photo">
+                  <img src="./img/photo.png" alt="your photo" />
+                </div>
+                <div class="photo_input">
+                  <div class="photo_buttons">
+                    <label for="choose_photo" class="choose_photo"></label>
+                    <input type="file" id="choose_photo" accept=".png .img" />
+                    <button type="reset"></button>
+                  </div>
+                  <p class="photo_text">Up to 1 MB (300x300 px)</p>
+                </div>
+              </div>
+              <div class="form2_grid">
+                <div class="form_group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" />
+                </div>
+                <div class="form_group">
+                  <label for="mail">E-mail</label>
+                  <input type="email" id="mail" name="mail" />
+                </div>
+                <div class="form_group">
+                    <label for="land">Country</label>
+                    <select name="country" id="land">
+                      <option value="select" disabled selected>Select</option>
+                      <option value="ukraine">Ukraine</option>
+                      <option value="poland">Poland</option>
+                      <option value="france">France</option>
+                      <option value="spain">Spain</option>
+                      <option value="italy">Italy</option>
+                    </select>
+                  </div>
+                  <div class="form_group">
+                    <label for="town">City</label>
+                    <input type="text" id="town" name="city" />
+                  </div>
+                  <div class="form_group">
+                    <label for="zip">Zip Code</label>
+                    <input type="number" id="zip" name="zip">
+                  </div>
+                  <div class="form_group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                  </div>
+              </div>
+              <div class="form2_button">
+                <button type="submit" class="update_button">
+                    Update
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
