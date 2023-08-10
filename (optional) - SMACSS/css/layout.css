@@ -1,0 +1,58 @@
+/*HEADER*/
+.header {
+    display: flex;
+    align-items: center;
+}
+.site_logo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav_list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    align-items: center;
+    margin-left: 206px;
+    margin-right: 246px;
+}
+/*MAIN*/
+main {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.main_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 570px;
+    text-align: center;
+    margin: 0 auto;
+    row-gap: 64px;
+    margin-bottom: 60px;
+}
+/*FOOTER*/
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+.link_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}

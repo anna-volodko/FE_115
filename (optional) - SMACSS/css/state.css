@@ -1,0 +1,52 @@
+/*HEADER*/
+.nav_item:hover {
+    color:var(--hover-card, #18B5DC);
+}
+.callback_button button:hover {
+    color: #fff;
+    border: 1px solid var(--hover-card, #18B5DC);
+    background: var(--hover-card, #18B5DC);
+}
+/*MAIN CARDS*/
+
+
+
+
+/*FOOTER*/
+.footer_item:hover {
+    color:var(--hover-card, #18B5DC);
+}
+.link_item:hover{
+    background-color: #18B5DC;
+    border: 1px solid var(--hover-card, #18B5DC);
+}
+.twitter:hover {
+    background-image: url(../img/twitter_white.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fb:hover {
+    background-image: url(../img/fb_white.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ig:hover {
+    background-image: url(../img/ig_white.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.linkedin:hover {
+    background-image: url(../img/linkedin_white.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.telegram:hover {
+    background-image: url(../img/linkedin_white.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}

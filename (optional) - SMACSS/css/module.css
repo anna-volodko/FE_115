@@ -1,0 +1,122 @@
+/*HEADER*/
+.nav_item {
+    color: var(--title-title-subtitle-text, #3C3C3C);
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+header {
+    border-bottom: 1px solid #BDBDBD;
+}
+.callback_button button {
+    color: var(--title-title-subtitle-text, #3C3C3C);
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid var(--title-title-subtitle-text, #3C3C3C);
+    padding: 10px 20px;
+}
+    /*MAIN*/
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left:41%;
+    width: 45px;
+    height: 4px; 
+    background-color: #DDDBDB;
+    }
+
+.upper_text {
+    color: var(--title-title-subtitle-text, #3C3C3C);
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+/*MAIN CARDS*/
+.card_list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+.card_item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+}
+.card_text {
+    display: flex;
+    flex-direction: column;
+}
+.card__text_black {
+    color: var(--card-name-text, #282528);
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card__text_smaller {
+    color: var(--card-position-text, #646464);
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+/*FOOTER*/
+.footer_item {  
+    color: var(--title-title-subtitle-text, #3C3C3C);
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.link_item {
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border: 1px solid var(--hover-card, #18B5DC);
+}
+.twitter {
+    background-image: url(../img/twitter_blue.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fb {
+    background-image: url(../img/fb_blue.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ig {
+    background-image: url(../img/ig_blue.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.linkedin {
+    background-image: url(../img/linkedin_blue.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.telegram {
+    background-image: url(../img/telegram_blue.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}

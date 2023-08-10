@@ -108,5 +108,5 @@ input[type='checkbox']:checked + .fake_checkbox{
     background-position: center;
 }
 input [type='checkbox']:checked + .text_label *{
-    text-decoration-line: line-through;
+    text-decoration: line-through;
 }
