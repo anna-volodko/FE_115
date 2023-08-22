@@ -106,6 +106,7 @@ header {
   padding-left: 150px;
   padding-right: 150px;
   box-shadow: 0px 25px 27px -28px rgba(143, 133, 143, 0.64);
+  top: 0;
 }
 
 .icons {
