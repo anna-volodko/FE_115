@@ -731,11 +731,6 @@
                 <b>A</b> - Cheers to what's ahead! Your days will be filled with enjoyable conversations and shared drinks.
               </li>
             </ol>
-            <p>
-              Are you feeling lucky? Draw another card and see what fate has in
-              store for you!
-            </p>
-            <button id="nextButton">NEXT CARD</button>
           </div>
         </div>
       </div>
@@ -751,9 +746,6 @@
           document.querySelector(".card.active").classList.remove("active");
         cards[getRandomNumber(0, cards.length - 1)].classList.add("active");
       }
-
-      const nextButton = document.getElementById("nextButton");
-      nextButton.addEventListener("click", activateRandomCard);
 
       const goButton = document.getElementById("goButton");
       goButton.addEventListener("click", activateRandomCard);
