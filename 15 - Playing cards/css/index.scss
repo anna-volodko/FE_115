@@ -6,8 +6,7 @@
 body, html {
     width: 100%;
     height: 100%;
-    background-color: rgb(240, 82, 70);
-    padding: 50px;
+    background-color: #489FB5;
 }
 ul, ol {
     list-style: none;
@@ -22,19 +21,29 @@ a {
     width: 100%;
     margin: 0 auto;
 }
+main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 /*---------------TABLE----------------------*/
 .table_grid {
     display: flex;
     flex-wrap: wrap;
     column-gap: 15px;
-    row-gap: 15px;
-    justify-content: center;
+    row-gap: 25px;
+    justify-content:center;
     max-width: 700px;
+    align-content: center;
 }
 .table {
     background-color: rgb(7, 206, 140);
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    border: 10px solid #16697A;
+    border-radius: 30px;
 }
 
 
@@ -50,10 +59,10 @@ a {
     height: 93px;
     position: relative;
 }
-.card:hover .card_front {
+.card.active .card_front {
     transform: rotateY(180deg);
 }
-.card:hover .card_back {
+.card.active .card_back {
     transform: rotateY(0deg);
 }
 .card_front, .card_back {
@@ -82,14 +91,13 @@ a {
     background-color: #fff;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 0px;
+    padding-bottom: 3px;
     display: flex;
     border-radius: 5px;
     justify-content: space-between;
     border: 1px solid #494747;
     backface-visibility: hidden;
-    transform: rotateY(180deg);
-    
+    transform: rotateY(180deg); 
 }
 .column_1 {
     display: flex;
@@ -117,8 +125,59 @@ a {
 .big {
     max-width: 40px;
 }
-p {
+.card p {
     font-family: "phudu", Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 
+/*-------------------------TEXT--------------------------*/
+h1 {
+    font-family: "Phudu", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+.meaning {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+ol {
+    border: 1px solid #14750b;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 5px;
+    row-gap: 5px;
+    max-width: 320px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Phudu", Arial, Helvetica, sans-serif;
+    background-color: #489FB5;
+    border: 2px solid #16697A;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #FF4848;
+    border: 2px solid #ecc204;
+    color: #fff;
+}
+.button1 {
+    margin-bottom: 10px;
+}
