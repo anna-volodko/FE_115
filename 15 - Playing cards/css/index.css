@@ -7,7 +7,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  background-color: #489FB5;
+  background-color: #3C3C3C;
 }
 
 ul, ol {
@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
@@ -38,8 +38,10 @@ main {
   column-gap: 15px;
   row-gap: 25px;
   justify-content: center;
-  max-width: 700px;
+  gap: 40px;
   align-content: center;
+  height: 90vh;
+  max-width: 60%;
 }
 
 .table {
@@ -47,10 +49,12 @@ main {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-right: 20px;
-  border: 10px solid #16697A;
+  border: 10px solid #087E8B;
   border-radius: 30px;
+  align-content: center;
+  align-items: center;
 }
 
 /*---------------CARDS-----------------------*/
@@ -77,8 +81,8 @@ main {
 }
 
 .card_front, .card_back {
-  width: 60px;
-  height: 93px;
+  width: 75px;
+  height: 115px;
   transition: all 0.3s ease;
   position: absolute;
 }
@@ -96,7 +100,7 @@ main {
 }
 
 .card_front img {
-  max-width: 60px;
+  max-width: 75px;
   border-radius: 5px;
 }
 
@@ -107,7 +111,7 @@ main {
   padding-bottom: 3px;
   display: flex;
   border-radius: 5px;
-  justify-content: space-between;
+  justify-content: center;
   border: 1px solid #494747;
   backface-visibility: hidden;
   transform: rotateY(180deg);
@@ -141,19 +145,19 @@ main {
 }
 
 .big {
-  max-width: 40px;
+  max-width: 50px;
 }
 
 .card p {
   font-family: "phudu", Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /*-------------------------TEXT--------------------------*/
 h1 {
   font-family: "Phudu", Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 23px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
@@ -162,8 +166,10 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  align-content: center;
+  font-size: 16px;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .meaning {
@@ -179,22 +185,23 @@ ol {
   text-align: start;
   padding: 5px;
   row-gap: 5px;
-  max-width: 320px;
-  font-size: 10px;
+  max-width: 450px;
+  font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 button {
-  width: 100px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: "Phudu", Arial, Helvetica, sans-serif;
   background-color: #489FB5;
   border: 2px solid #16697A;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
+  font-size: 20px;
 }
 
 button:hover {
