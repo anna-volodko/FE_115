@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .1s ease-in;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 82, 70);
+    padding: 50px;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*---------------TABLE----------------------*/
+.table_grid {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+    max-width: 700px;
+}
+.table {
+    background-color: rgb(7, 206, 140);
+    display: flex;
+    justify-content: center;
+}
+
+
+/*---------------CARDS-----------------------*/
+.red {
+    color: #FF4848;
+}
+.black {
+    color: #494747;
+}
+.card {
+    width: 60px;
+    height: 93px;
+    position: relative;
+}
+.card:hover .card_front {
+    transform: rotateY(180deg);
+}
+.card:hover .card_back {
+    transform: rotateY(0deg);
+}
+.card_front, .card_back {
+    width: 60px;
+    height: 93px;
+    transition: all .3s ease;
+    position: absolute;
+}
+.card_front {
+    background-color: #fff;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    border: 1px solid #494747;
+    display:inline-block;
+    
+    backface-visibility: hidden;
+}
+.card_front img {
+    max-width: 60px;
+    border-radius: 5px;
+}
+.card_back {
+    background-color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    border: 1px solid #494747;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+.column_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.column_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.column_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: rotate(180deg);
+}
+.small {
+    width: 10px;
+    height: 10px;
+}
+.big {
+    max-width: 40px;
+}
+p {
+    font-family: "phudu", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
