@@ -256,11 +256,25 @@
       function mobileMenu() {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+          nav.style.position = "fixed";
+          nav.style.top = "0";
+        } else {
+          nav.style.position = "static";
+        }
       }
 
       function closeMenu() {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+
+        if (navMenu.classList.contains("active")) {
+          nav.style.position = "fixed";
+          nav.style.top = "0";
+        } else {
+          nav.style.position = "static";
+        }
       }
     </script>
   </body>

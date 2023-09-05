@@ -669,7 +669,7 @@ footer {
   .nav {
     position: fixed;
     right: -200%;
-    top: 90px;
+    top: 70px;
     bottom: 0px;
     flex-direction: column;
     justify-content: flex-start;
@@ -723,5 +723,18 @@ footer {
 
   .name {
     text-align: center;
+  }
+}
+@media screen and (orientation: landscape) {
+  .down {
+    bottom: 20px;
+  }
+
+  .header {
+    padding-top: 70px;
+  }
+
+  .nav_logo {
+    display: none;
   }
 }
