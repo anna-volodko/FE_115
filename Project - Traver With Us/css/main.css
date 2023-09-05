@@ -590,7 +590,7 @@ footer {
   .nav {
     position: fixed;
     right: -100%;
-    top: 0px;
+    top: 40px;
     flex-direction: column;
     justify-content: flex-start;
     background-color: #5373FD;
