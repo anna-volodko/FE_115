@@ -162,7 +162,7 @@ input[type=text]::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 295px;
+  padding-top: 40vh;
 }
 
 /*-------------------------------------NAVIGATION----------------*/
@@ -725,7 +725,7 @@ footer {
     text-align: center;
   }
 }
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
   .down {
     bottom: 20px;
   }
