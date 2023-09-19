@@ -157,3 +157,68 @@ if (isNaN(yourNumber) || yourNumber.length < 3) {
     console.log(`New reversed number - ${thirdDigit}${secondDigit}${firstDigit}`);
 }   
 }
+
+/*----------------------------DATE + 1--------------------------------*/
+// 01.01.2021 - 02.01.2021
+// 31.12.2021 - 01.01.2022
+//28.02.2020 - 29.02.2020 
+//29.02.2020 - 01.03.2020 - any othe year mistake
+// 30days: 4, 6, 9 , 11. other months - 31
+//29.02.2021 - 01.03.2021
+
+function calcDate() {
+    const userDate = prompt('Add date');
+    const dateArray = userDate.split('.');
+    console.log(dateArray);
+    const day = +dateArray[0];
+    const month = +dateArray[1];
+    const year = +dateArray[2];
+    if(isNaN(day) || isNaN(month) || isNaN(year)) return false;
+    let nextDay = day + 1;
+    let nextMonth = month;
+    let nextYear = year; 
+    switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if(day >= 30) {
+                nextDay = 1;
+                nextMonth++;
+            }
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            if(day >= 31) {
+                nextDay = 1;
+                nextMonth++;
+            }
+            break;
+        case 2:
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                if(day === 29) {
+                    nextDay = 1;
+                    nextMonth++;
+                } 
+            } else {
+                if(day >= 28) {
+                    nextDay = 1;
+                    nextMonth++;
+                } 
+            } 
+            break;
+    }
+    if (nextMonth > 12) {
+        nextMonth = 1;
+        nextDay = 1;
+        nextYear++;
+    }
+
+    const addZero = n => n < 10 ? `0${n}` : n;
+    console.log(`Next date - ${addZero(nextDay)}.${addZero(nextMonth)}.${nextYear}`);
+}

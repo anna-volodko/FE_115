@@ -184,3 +184,78 @@ function reversedNumber() {
     console.log("New reversed number - ".concat(thirdDigit).concat(secondDigit).concat(firstDigit));
   }
 }
+/*----------------------------DATE + 1--------------------------------*/
+// 01.01.2021 - 02.01.2021
+// 31.12.2021 - 01.01.2022
+//28.02.2020 - 29.02.2020 
+//29.02.2020 - 01.03.2020 - any othe year mistake
+// 30days: 4, 6, 9 , 11. other months - 31
+//29.02.2021 - 01.03.2021
+
+
+function calcDate() {
+  var userDate = prompt('Add date');
+  var dateArray = userDate.split('.');
+  console.log(dateArray);
+  var day = +dateArray[0];
+  var month = +dateArray[1];
+  var year = +dateArray[2];
+  if (isNaN(day) || isNaN(month) || isNaN(year)) return false;
+  var nextDay = day + 1;
+  var nextMonth = month;
+  var nextYear = year;
+
+  switch (month) {
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      if (day >= 30) {
+        nextDay = 1;
+        nextMonth++;
+      }
+
+      break;
+
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      if (day >= 31) {
+        nextDay = 1;
+        nextMonth++;
+      }
+
+      break;
+
+    case 2:
+      if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        if (day === 29) {
+          nextDay = 1;
+          nextMonth++;
+        }
+      } else {
+        if (day >= 28) {
+          nextDay = 1;
+          nextMonth++;
+        }
+      }
+
+      break;
+  }
+
+  if (nextMonth > 12) {
+    nextMonth = 1;
+    nextDay = 1;
+    nextYear++;
+  }
+
+  var addZero = function addZero(n) {
+    return n < 10 ? "0".concat(n) : n;
+  };
+
+  console.log("Next date - ".concat(addZero(nextDay), ".").concat(addZero(nextMonth), ".").concat(nextYear));
+}
