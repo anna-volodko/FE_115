@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Objects - JS</title>
+  </head>
+  <body>
+    <main class="container">
+      <div>
+        <h1>Мінімум</h1>
+        <ul>
+          <li>
+            <button onclick="car.showInfo()" type="button">Show info</button>
+          </li>
+          <li>
+            <button onclick="car.addDriver('Oleg')" type="button">
+              Add driver
+            </button>
+          </li>
+          <li>
+            <button onclick="car.checkDriver('Oleg')" type="button">
+              Check driver Oleg
+            </button>
+          </li>
+          <li>
+            <button onclick="car.calcTimeFuel(1000)" type="button">
+              Fuel and time to drive
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>Норма</h1>
+        <ul>
+          <li>
+            <button onclick="time.showTime()" type="button">Show time</button>
+          </li>
+          <li>
+            <button onclick="time.changeTime()" type="button">
+              Change time
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>Максимум</h1>
+        <ul>
+          <li>
+            <button onclick="toCommonDenominator()" type="button">
+              Спільний знаменник
+            </button>
+          </li>
+          <li>
+            <button onclick="fractionAddition()" type="button">
+              Додавання дробів
+            </button>
+          </li>
+          <li>
+            <button onclick="fractionSubtraction()" type="button">
+              Віднімання дробів
+            </button>
+          </li>
+          <li>
+            <button onclick="fractionMultiplication()" type="button">
+              Множення дробів
+            </button>
+          </li>
+          <li>
+            <button onclick="fractionDivision()" type="button">
+              Ділення дробів
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="./js/firsttask.js"></script>
+    <script src="./js/secondtask.js"></script>
+    <script src="./js/thirdtask.js"></script>
+  </body>
+</html>
