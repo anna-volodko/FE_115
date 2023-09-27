@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans:wght@400;600;800&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Array JS</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1>магазин "скринька"</h1>
+      <p>Ласкаво просимо до нашої крамниці!</p>
+    </header>
+    <main class="container">
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Millenium</p>
+        <p>Product Code: 100</p>
+        <button onclick="addToCart(100, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(100)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Ritter Sport</p>
+        <p>Product Code: 200</p>
+        <button onclick="addToCart(200, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(200)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Milka</p>
+        <p>Product Code: 300</p>
+        <button onclick="addToCart(300, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(300)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Toblerone</p>
+        <p>Product Code: 400</p>
+        <button onclick="addToCart(400, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(400)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Roshen</p>
+        <p>Product Code: 500</p>
+        <button onclick="addToCart(500, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(500)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Ferrero</p>
+        <p>Product Code: 600</p>
+        <button onclick="addToCart(600, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(600)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Spell</p>
+        <p>Product Code: 700</p>
+        <button onclick="addToCart(700, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(700)" type="button">Видалити з кошика</button>
+      </div>
+      <div class="product_item">
+        <img src="./assets/almost chockolate.svg" alt="" />
+        <p class="bold">Merci</p>
+        <p>Product Code: 800</p>
+        <button onclick="addToCart(800, 1)" type="button">Додати до кошика</button>
+        <button onclick="deleteProduct(800)" type="button">Видалити з кошика</button>
+      </div>
+    </main>
+    <footer class="container">
+        <button onclick="showCartProducts()" type="button">Що в моєму кошику?</button>
+        <button onclick="getProductAmount()" type="button">А на яку суму?</button>
+        <button onclick="toHigherPrice()" type="button">Сортувати по зростанню ціни</button>
+        <button onclick="toLowerPrice()" type="button">Сортувати по зменшенню ціни</button>
+        <button onclick="showAvailableFirst()" type="button">Показати спершу доступні товари</button>
+    </footer>
+    <script src="./arrays.js"></script>
+  </body>
+</html>
