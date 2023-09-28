@@ -65,12 +65,13 @@ function addToCart(id, quantity) {
             return false;
         } 
         if(newProduct.quantity < quantity) {
-            console.log(`В нас немає так багато шоколадок!`);
+            console.log(`Цю шоколадку вже розкупили :(`);
             return false;
         }
         newProduct.quantity = quantity;
         userCart.push(newProduct);
         // setQuantity(newProduct.quantity - quantity,id);
+        console.log(`Цю шоколадку додано до кошика!`)
 }
 // addToCart(100, 2);
 // addToCart(300, 2);
@@ -85,6 +86,7 @@ function setQuantity(quantity,id) {
 function deleteProduct(id) {
     const deletedProduct = userCart.findIndex(el => el.uniqId === id);
     userCart.splice(deletedProduct, 1);
+    console.log(`Цю шоколадку видалено з кошика!`)
 }
 // deleteProduct(100);
 
