@@ -55,21 +55,25 @@ function addToCart(id, quantity) {
   var newProduct = allProducts.find(function (el) {
     return el.uniqId === id;
   });
+  var alreadyIn = userCart.findIndex(function (el) {
+    return el.uniqId === id;
+  });
 
   if (!newProduct) {
-    console.log("\u0412 \u043D\u0430\u0441 \u0442\u0430\u043A\u043E\u0433\u043E \u043D\u0435\u043C\u0430\u0454, \u0456\u0434\u0456\u0442\u044C \u0432 \u0456\u043D\u0448\u0438\u0439 \u043C\u0430\u0433\u0430\u0437\u0438\u043D!");
+    console.log("\u0412 \u043D\u0430\u0441 \u0442\u0430\u043A\u043E\u0433\u043E \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0443 \u043D\u0435\u043C\u0430\u0454, \u0456\u0434\u0456\u0442\u044C \u0432 \u0456\u043D\u0448\u0438\u0439 \u043C\u0430\u0433\u0430\u0437\u0438\u043D!");
     return false;
-  }
-
-  if (newProduct.quantity < quantity) {
+  } else if (newProduct.quantity < quantity) {
     console.log("\u0426\u044E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443 \u0432\u0436\u0435 \u0440\u043E\u0437\u043A\u0443\u043F\u0438\u043B\u0438 :(");
     return false;
+  } else if (alreadyIn !== -1) {
+    userCart[alreadyIn].quantity += quantity;
+    console.log("\u041A\u0456\u043B\u044C\u043A\u0456\u0441\u0442\u044C \u0446\u0456\u0454\u0457 \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0438 \u0443 \u043A\u043E\u0448\u0438\u043A\u0443 \u0437\u0431\u0456\u043B\u044C\u0448\u0435\u043D\u043E!");
+  } else {
+    newProduct.quantity = quantity;
+    userCart.push(newProduct); // setQuantity(newProduct.quantity - quantity,id);
+
+    console.log("\u0426\u044E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443 \u0434\u043E\u0434\u0430\u043D\u043E \u0434\u043E \u043A\u043E\u0448\u0438\u043A\u0430!");
   }
-
-  newProduct.quantity = quantity;
-  userCart.push(newProduct); // setQuantity(newProduct.quantity - quantity,id);
-
-  console.log("\u0426\u044E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443 \u0434\u043E\u0434\u0430\u043D\u043E \u0434\u043E \u043A\u043E\u0448\u0438\u043A\u0430!");
 } // addToCart(100, 2);
 // addToCart(300, 2);
 // addToCart(500, 4);
@@ -90,7 +94,7 @@ function deleteProduct(id) {
   if (deletedProduct === -1) {
     console.log("\u0412\u0438 \u0446\u044E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443 \u043D\u0435 \u0434\u043E\u0434\u0430\u0432\u0430\u043B\u0438, \u0442\u043E\u043C\u0443 \u0456 \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u0437 \u043A\u043E\u0448\u0438\u043A\u0430 \u0457\u0457 \u043D\u0435 \u043C\u043E\u0436\u0435\u0442\u0435!");
   } else {
-    userCart.splice(deletedProduct, 1);
+    userCart.map(deletedProduct.quantity - 1);
     console.log("\u0426\u044E \u0448\u043E\u043A\u043E\u043B\u0430\u0434\u043A\u0443 \u0432\u0438\u0434\u0430\u043B\u0435\u043D\u043E \u0437 \u043A\u043E\u0448\u0438\u043A\u0430!");
   }
 } // deleteProduct(100);

@@ -59,20 +59,25 @@ const allProducts = [
 const userCart = [];
 
 function addToCart(id, quantity) {
-  const newProduct = allProducts.find((el) => el.uniqId === id);
-  if (!newProduct) {
-    console.log(`В нас такого немає, ідіть в інший магазин!`);
-    return false;
+    const newProduct = allProducts.find((el) => el.uniqId === id);
+    const alreadyIn = userCart.findIndex((el) => el.uniqId === id);
+    
+    if (!newProduct) {
+      console.log(`В нас такого продукту немає, ідіть в інший магазин!`);
+      return false;
+    } else if (newProduct.quantity < quantity) {
+      console.log(`Цю шоколадку вже розкупили :(`);
+      return false;
+    } else if (alreadyIn !== -1) {
+      userCart[alreadyIn].quantity += quantity;
+      console.log(`Кількість цієї шоколадки у кошику збільшено!`);
+    } else {
+      newProduct.quantity = quantity;
+      userCart.push(newProduct);
+      // setQuantity(newProduct.quantity - quantity,id);
+      console.log(`Цю шоколадку додано до кошика!`);
+    }
   }
-  if (newProduct.quantity < quantity) {
-    console.log(`Цю шоколадку вже розкупили :(`);
-    return false;
-  }
-  newProduct.quantity = quantity;
-  userCart.push(newProduct);
-  // setQuantity(newProduct.quantity - quantity,id);
-  console.log(`Цю шоколадку додано до кошика!`);
-}
 // addToCart(100, 2);
 // addToCart(300, 2);
 // addToCart(500, 4);
@@ -83,16 +88,16 @@ function setQuantity(quantity, id) {
 }
 
 function deleteProduct(id) {
-  const deletedProduct = userCart.findIndex((el) => el.uniqId === id);
-  if (deletedProduct === -1) {
-    console.log(
-      `Ви цю шоколадку не додавали, тому і видалити з кошика її не можете!`
-    );
-  } else {
-    userCart.splice(deletedProduct, 1);
-    console.log(`Цю шоколадку видалено з кошика!`);
+    const deletedProduct = userCart.findIndex((el) => el.uniqId === id);
+    if (deletedProduct === -1) {
+      console.log(
+        `Ви цю шоколадку не додавали, тому і видалити з кошика її не можете!`
+      );
+    } else {
+      userCart.map(deletedProduct.quantity - 1);
+      console.log(`Цю шоколадку видалено з кошика!`);
+    }
   }
-}
 // deleteProduct(100);
 
 function showCartProducts() {
