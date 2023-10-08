@@ -1,59 +1,125 @@
 "use strict";
 
-var firstFraction = {
+var fraction = {
   numerator: 2,
-  denominator: 4
-};
-var secondFraction = {
-  numerator: 3,
-  denominator: 7
-};
-var commonDenominator = firstFraction.denominator * secondFraction.denominator;
-var newFirstNumerator = firstFraction.numerator * secondFraction.denominator;
-var newSecondNumerator = secondFraction.numerator * firstFraction.denominator;
+  denominator: 3,
+  showValue: function showValue() {
+    console.log("Here is a fraction - ".concat(this.numerator, "/").concat(this.denominator));
+  },
+  findGCD: function findGCD(a, b) {
+    if (a == 0) {
+      return b;
+    }
 
-function toCommonDenominator() {
-  console.log("Fraction 1: ".concat(newFirstNumerator, "/").concat(commonDenominator, ". Fraction 2: ").concat(newSecondNumerator, "/").concat(commonDenominator, "."));
-}
+    return this.findGCD(b % a, a);
+  },
+  findLocalNumerator: function findLocalNumerator(n, d) {
+    return n * d;
+  },
+  addition: function addition(n, d) {
+    var localDenominator = 1;
 
-function findCommonDivisor(a, b) {
-  while (b !== 0) {
-    var remainder = a % b;
-    a = b;
-    b = remainder;
+    if (this.denominator === d) {
+      localDenominator = this.denominator;
+    } else {
+      localDenominator = this.denominator * d;
+      this.numerator = this.numerator * (localDenominator / this.denominator);
+      this.denominator = localDenominator;
+      n = n * (localDenominator / d);
+      d = localDenominator;
+      var addingResultNumerator = this.numerator + n;
+      var gcd = this.findGCD(addingResultNumerator, d);
+      console.log("The result is ".concat(addingResultNumerator / gcd, "/").concat(d / gcd));
+    }
+  },
+  substraction: function substraction(n, d) {
+    var localDenominator = 1;
+
+    if (this.denominator === d) {
+      localDenominator = this.denominator;
+    } else {
+      localDenominator = this.denominator * d;
+      this.numerator = this.numerator * (localDenominator / this.denominator);
+      this.denominator = localDenominator;
+      n = n * (localDenominator / d);
+      d = localDenominator;
+      var substractionResultNumerator = this.numerator - n;
+      var gcd = this.findGCD(substractionResultNumerator, d);
+      console.log("The result is ".concat(substractionResultNumerator / gcd, "/").concat(d / gcd));
+    }
+  },
+  multiplication: function multiplication(n, d) {
+    multiplicationNumerator = this.numerator * n;
+    multiplicationDenominator = this.denominator * d;
+    var gcd = this.findGCD(multiplicationNumerator, multiplicationDenominator);
+    console.log("The result is ".concat(multiplicationNumerator / gcd, " / ").concat(multiplicationDenominator / gcd));
+  },
+  division: function division(n, d) {
+    var topDivision = this.numerator * d;
+    var bottomDivision = this.denominator * n;
+    var gcd = this.findGCD(topDivision, bottomDivision);
+    var newNumDivision = topDivision / gcd;
+    var newDenomDivision = bottomDivision / gcd;
+    console.log("The result is ".concat(newNumDivision, "/").concat(newDenomDivision));
   }
-
-  return a;
-}
-
-var commonDivisor = findCommonDivisor(newFirstNumerator + newSecondNumerator, commonDenominator);
-var simpleDenominator = commonDenominator / commonDivisor;
-
-function fractionAddition() {
-  var numeratorSum = (newFirstNumerator + newSecondNumerator) / commonDivisor;
-  console.log("1st fraction + 2nd fraction = ".concat(numeratorSum, "/").concat(simpleDenominator));
-}
-
-function fractionSubtraction() {
-  var numeratorSubtraction = (newFirstNumerator - newSecondNumerator) / commonDivisor;
-  console.log("1st fraction - 2nd fraction = ".concat(numeratorSubtraction, "/").concat(simpleDenominator));
-}
-
-var numeratorMultiplication = firstFraction.numerator * secondFraction.numerator;
-var denominatorMultiplication = firstFraction.denominator * secondFraction.denominator;
-var commonDivisorMulti = findCommonDivisor(numeratorMultiplication, denominatorMultiplication);
-var newNumMulti = numeratorMultiplication / commonDivisorMulti;
-var newDenomMulti = denominatorMultiplication / commonDivisorMulti;
-
-function fractionMultiplication() {
-  console.log("1st fraction * 2nd fraction = ".concat(newNumMulti, "/").concat(newDenomMulti));
-}
-
-function fractionDivision() {
-  var topDivision = firstFraction.numerator * secondFraction.denominator;
-  var bottomDivision = firstFraction.denominator * secondFraction.numerator;
-  var commonDivisorDivision = findCommonDivisor(topDivision, bottomDivision);
-  var newNumDivision = topDivision / commonDivisorDivision;
-  var newDenomDivision = bottomDivision / commonDivisorDivision;
-  console.log("1st fraction : 2nd fraction = ".concat(newNumDivision, "/").concat(newDenomDivision));
-}
+}; // const firstFraction = {
+//     numerator: 2,
+//     denominator: 4,
+// }
+// const secondFraction = {
+//     numerator: 3,
+//     denominator: 7,
+// }
+// const commonDenominator = firstFraction.denominator * secondFraction.denominator;
+// const newFirstNumerator = firstFraction.numerator * secondFraction.denominator;
+// const newSecondNumerator = secondFraction.numerator * firstFraction.denominator;
+// function toCommonDenominator() {
+//     console.log(`Fraction 1: ${newFirstNumerator}/${commonDenominator}. Fraction 2: ${newSecondNumerator}/${commonDenominator}.`);
+// }
+// function findCommonDivisor(a, b) {
+//     while (b !== 0) {
+//         const remainder = a % b;
+//         a = b;
+//         b = remainder;
+//     }
+//     return a;
+// }
+// const commonDivisor = findCommonDivisor(newFirstNumerator + newSecondNumerator, commonDenominator);
+// const simpleDenominator = commonDenominator / commonDivisor;
+// function fractionAddition() {
+//     const numeratorSum = (newFirstNumerator + newSecondNumerator) / commonDivisor;
+//     console.log(`1st fraction + 2nd fraction = ${numeratorSum}/${simpleDenominator}`);
+// }
+// function fractionSubtraction() {
+//     const numeratorSubtraction = (newFirstNumerator - newSecondNumerator) / commonDivisor;
+//     console.log(`1st fraction - 2nd fraction = ${numeratorSubtraction}/${simpleDenominator}`);
+// }
+// const numeratorMultiplication = firstFraction.numerator * secondFraction.numerator;
+// const denominatorMultiplication = firstFraction.denominator * secondFraction.denominator;
+// const commonDivisorMulti = findCommonDivisor(numeratorMultiplication,denominatorMultiplication);
+// const newNumMulti = numeratorMultiplication / commonDivisorMulti;
+// const newDenomMulti = denominatorMultiplication / commonDivisorMulti;
+// function fractionMultiplication() {
+//     console.log(`1st fraction * 2nd fraction = ${newNumMulti}/${newDenomMulti}`);
+// }
+// function fractionDivision(){
+//     const topDivision = firstFraction.numerator * secondFraction.denominator;
+//     const bottomDivision = firstFraction.denominator * secondFraction.numerator;
+//     const commonDivisorDivision = findCommonDivisor(topDivision,bottomDivision);
+//     const newNumDivision = topDivision / commonDivisorDivision;
+//     const newDenomDivision = bottomDivision / commonDivisorDivision;
+//     console.log(`1st fraction : 2nd fraction = ${newNumDivision}/${newDenomDivision}`);
+// }
+// function speak(f){
+// 		var d=new SpeechSynthesisUtterance();
+// 		var e=speechSynthesis.getVoices();
+// 		d.voice=e[2];
+//     d.voiceURI="native";
+// 		d.volume=1;
+// 		d.rate=1;
+// 		d.pitch=1;
+// 		d.text=f;
+// 		d.lang="en-EN";
+// 		speechSynthesis.speak(d)
+// 	}
+// 	speak("Hello my master!");
