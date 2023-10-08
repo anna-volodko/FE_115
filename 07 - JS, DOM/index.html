@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans:wght@400;600;800&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>DOM HW</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="container">
-        <div class="task_1">
-            <div class="buttons">
-            <button onclick="openPlayList()" type="button">Show Playlist</button>
-            <button onclick="hidePlayList()" type="button">Hide Playlist</button>
-            </div>
-            <div class="playlist" id="playlist"></div>
+      <div class="task_1">
+        <div class="buttons">
+          <button onclick="openPlayList()" type="button">Show Playlist</button>
         </div>
+        <div class="playlist" id="playlist"></div>
+      </div>
+      <div class="task2">
+        <button type="button" onclick="changeLight()">Turn on</button>
+        <div class="traffic_wrapper">
+          <div class="notactive green"></div>
+          <div class="notactive yellow"></div>
+          <div class="notactive red"></div>
+        </div>
+        <div class="line"></div>
+      </div>
     </main>
+    <footer></footer>
     <script src="./js/playlist.js"></script>
-</body>
+    <script src="./js/traffic.js"></script>
+  </body>
 </html>

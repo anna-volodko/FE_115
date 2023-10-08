@@ -34,15 +34,16 @@ const playList = [
 ];
 function openPlayList() {
     const list = document.getElementById('playlist');
-    let htmlToInsert = '<ul>';
-    
+    let htmlToInsert = '<ul class="list">';
+    list.style.display = 'block';
     for ( i = 0; i < playList.length; i++) {
         htmlToInsert += `<li>${playList[i].song} by ${playList[i].author} </li>`;
     }
     
-    htmlToInsert += '</ul>';
+    htmlToInsert += '</ul> <button onclick="hidePlayList()" type="button">Hide Playlist</button>';
     list.innerHTML = htmlToInsert;
 }
 function hidePlayList() {
-    
+    const list = document.getElementById('playlist');
+    list.style.display = 'none';
 }

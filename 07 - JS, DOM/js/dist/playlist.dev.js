@@ -28,14 +28,18 @@ var playList = [{
 
 function openPlayList() {
   var list = document.getElementById('playlist');
-  var htmlToInsert = '<ul>';
+  var htmlToInsert = '<ul class="list">';
+  list.style.display = 'block';
 
   for (i = 0; i < playList.length; i++) {
     htmlToInsert += "<li>".concat(playList[i].song, " by ").concat(playList[i].author, " </li>");
   }
 
-  htmlToInsert += '</ul>';
+  htmlToInsert += '</ul> <button onclick="hidePlayList()" type="button">Hide Playlist</button>';
   list.innerHTML = htmlToInsert;
 }
 
-function hidePlayList() {}
+function hidePlayList() {
+  var list = document.getElementById('playlist');
+  list.style.display = 'none';
+}
