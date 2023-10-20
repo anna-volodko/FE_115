@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="./css/lightgallery-bundle.css" />
+    <link rel="stylesheet" href="./css/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans:wght@400;600;800&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans:wght@400;600;800&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500&family=Source+Sans+3&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500&family=Source+Sans+3&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/611f0aa334.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>MONTICELLO</title>
+  </head>
+  <body>
+    <header>
+      <div class="main_nav container tablet_container">
+        <a href="#" class="logo"><img src="./assets/Logo.png" alt="logo" /></a>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="#"><span class="nav_dot"></span>about us</a>
+          </li>
+          <li class="nav_item">
+            <a href="#projects"><span class="nav_dot"></span>projects</a>
+          </li>
+          <li class="nav_item">
+            <a href="#news"><span class="nav_dot"></span>news</a>
+          </li>
+          <li class="nav_item">
+            <a href="#contact"><span class="nav_dot"></span>contact</a>
+          </li>
+        </ul>
+        <ul class="sn_list sn_none">
+          <li class="sn_item">
+            <a href="#">
+              <svg class="facebook">
+                <use xlink:href="./assets/sprite.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="sn_item">
+            <a href="#">
+              <svg class="twitter">
+                <use xlink:href="./assets/sprite.svg#twitter" />
+              </svg>
+            </a>
+          </li>
+          <li class="sn_item">
+            <a href="#">
+              <svg class="instagram">
+                <use xlink:href="./assets/sprite.svg#instagram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <div class="hero_slider">
+        <div class="hero_text">
+          <h1>SIMPLE &amp; MODERN</h1>
+          <p class="hero_vision">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+        </div>
+        <div class="hero_text">
+          <h1>GREAT DESIGN</h1>
+          <p class="hero_vision">Scalable architecture for future growth</p>
+        </div>
+        <div class="hero_text">
+          <h1>EXPLORE THE WORLD</h1>
+          <p class="hero_vision">Designed to handle high demand</p>
+        </div>
+        <div class="hero_text">
+          <h1>CREATE YOUR DREAM</h1>
+          <p class="hero_vision">Responsive interface powered by our architecture</p>
+        </div>
+        <div class="hero_text">
+          <h1>DISCOVER &amp; EXPLORE</h1>
+          <p class="hero_vision">
+            Our service's solid architecture means reliability
+          </p>
+        </div>
+      </div>
+      <div class="down_button">
+        <a href="#projects">
+          <svg class="down">
+            <use xlink:href="./assets/sprite.svg#down" />
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="projects container" id="projects">
+        <h2>what we do</h2>
+        <div class="all_projects">
+          <div class="project_item">
+            <picture class="img_container">
+              <img class="project_img" src="./assets/project1.jpg" />
+              <source
+                srcset="./assets/project1.jpg"
+                media="(max-width: 1280px)"
+              />
+              <source
+                srcset="./assets/project1-tablet.jpg"
+                media="(max-width: 968px)"
+              />
+              <source
+                srcset="./assets/project1-phone.jpg"
+                media="(max-width: 576px)"
+              />
+            </picture>
+            <div class="project_description">
+              <p class="place">ONE WORLD</p>
+              <p class="name">TRADE CENTER</p>
+              <p class="description">
+                Increasing prosperity in our lives can be accomplished by having
+                the right frame of mind. The truth is, our thoughts are very
+                powerful.
+              </p>
+              <a href="#" class="details">MORE DETAILS</a>
+              <a href="#map" class="location">
+                <span>
+                  <svg class="loc_marker">
+                    <use xlink:href="./assets/sprite.svg#loc_marker" />
+                  </svg>
+                </span>
+                New York City, United States - 1776 feet
+              </a>
+            </div>
+          </div>
+          <div class="project_item reversed">
+            <div class="project_description">
+              <p class="place">INTERNATIONAL</p>
+              <p class="name">COMMERCE CENTRE</p>
+              <p class="description">
+                Successful businesses have many things in common, today we’ll
+                look at the big ‘R’ of recognition and how a digital advertising
+                network may help.
+              </p>
+              <a href="#" class="details">MORE DETAILS</a>
+              <a href="#map" class="location">
+                <span>
+                  <svg class="loc_marker">
+                    <use xlink:href="./assets/sprite.svg#loc_marker" />
+                  </svg>
+                </span>
+                Hong Kong - 1588 feet
+              </a>
+            </div>
+            <picture class="img_container violet">
+              <img class="project_img" src="./assets/project2.jpg" />
+              <source
+                srcset="./assets/project2.jpg"
+                media="(max-width: 1280px)"
+              />
+              <source
+                srcset="./assets/project2-tablet.jpg"
+                media="(max-width: 968px)"
+              />
+              <source
+                srcset="./assets/project2-phone.jpg"
+                media="(max-width: 576px)"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="news" id="news">
+        <h2>latest news</h2>
+        <div class="news_slider container">
+          <div class="news_card">
+            <img src="./assets/news1.jpg" alt="building" class="building_img" />
+            <div class="card_feedback">
+              <a href="#" class="post_name"
+                >SEE THE UNMATCHED BEAUTY OF THE GREAT.</a
+              >
+              <p class="description">
+                Free directories: directories are perfect for customers that are
+                searching for...
+              </p>
+              <div class="blogger">
+                <img src="./assets/alja.jpg" alt="alja" class="blogger_photo" />
+                <div class="blogger_info">
+                  <p class="blogger_name">ALJA BRUN</p>
+                  <p class="post_date">20 Jan 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news_card">
+            <img src="./assets/news2.jpg" alt="building" class="building_img" />
+            <div class="card_feedback">
+              <a href="#" class="post_name">EFFECTIVE ADVERTISING POINTERS.</a>
+              <p class="description">
+                Having a home based business is a wonderful asset to your
+                life...
+              </p>
+              <div class="blogger">
+                <img
+                  src="./assets/dominic.jpg"
+                  alt="dominic"
+                  class="blogger_photo"
+                />
+                <div class="blogger_info">
+                  <p class="blogger_name">DOMINIC FREEMAN</p>
+                  <p class="post_date">13 Dec 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news_card">
+            <img src="./assets/news3.jpg" alt="building" class="building_img" />
+            <div class="card_feedback">
+              <a href="#" class="post_name"
+                >HYPNOTIZE YOURSELF INTO THE GHOST.</a
+              >
+              <p class="description">
+                There are many things that are important to catalog design...
+              </p>
+              <div class="blogger">
+                <img
+                  src="./assets/alice.jpg"
+                  alt="alice"
+                  class="blogger_photo"
+                />
+                <div class="blogger_info">
+                  <p class="blogger_name">ALICE WARD</p>
+                  <p class="post_date">30 Nov 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news_card">
+            <img src="./assets/news1.jpg" alt="building" class="building_img" />
+            <div class="card_feedback">
+              <a href="#" class="post_name"
+                >SEE THE UNMATCHED BEAUTY OF THE GREAT.</a
+              >
+              <p class="description">
+                Free directories: directories are perfect for customers that are
+                searching for...
+              </p>
+              <div class="blogger">
+                <img src="./assets/alja.jpg" alt="alja" class="blogger_photo" />
+                <div class="blogger_info">
+                  <p class="blogger_name">ALJA BRUN</p>
+                  <p class="post_date">20 Jan 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news_card">
+            <img src="./assets/news2.jpg" alt="building" class="building_img" />
+            <div class="card_feedback">
+              <a href="#" class="post_name">EFFECTIVE ADVERTISING POINTERS.</a>
+              <p class="description">
+                Having a home based business is a wonderful asset to your
+                life...
+              </p>
+              <div class="blogger">
+                <img
+                  src="./assets/dominic.jpg"
+                  alt="dominic"
+                  class="blogger_photo"
+                />
+                <div class="blogger_info">
+                  <p class="blogger_name">DOMINIC FREEMAN</p>
+                  <p class="post_date">13 Dec 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery container">
+        <h2>gallery</h2>
+        <div class="lightgallery" id="lightgallery">
+          <a href="./assets/gallery1.jpg" class="gal1">
+            <img src="./assets/gallery1.jpg" />
+          </a>
+          <a href="./assets/gallery2.jpg" class="gal2">
+            <img src="./assets/gallery2.jpg" />
+          </a>
+          <a href="./assets/gallery3.jpg" class="gal3">
+            <img src="./assets/gallery3.jpg" />
+          </a>
+          <a href="./assets/gallery4.jpg" class="gal4">
+            <img src="./assets/gallery4.jpg" />
+          </a>
+          <a href="./assets/gallery5.jpg" class="gal5">
+            <img src="./assets/gallery5.jpg" />
+          </a>
+        </div>
+        <div class="seebutton_container">
+          <a href="#" class="details">see more</a>
+        </div>
+      </section>
+      <section id="map" class="map"></section>
+    </main>
+    <footer>
+      <div class="form" id="contact">
+        <div class="form_bg">
+          <h2 class="h2_form">Get in touch</h2>
+          <div class="form_wrapper">
+            <div class="contact_info">
+              <a href="#"
+                ><span class="icon"
+                  ><i class="fa-solid fa-location-dot"></i></span
+                >91 Nolan Extensions Suite 670</a
+              >
+              <a href="tel:+001 356-868-2454"
+                ><span class="icon"><i class="fa-solid fa-phone"></i></span>+001
+                356-868-2454</a
+              >
+              <a href="mailto:montichello@service.com"
+                ><span class="icon"><i class="fa-solid fa-inbox"></i></span
+                >montichello@service.com</a
+              >
+              <p>
+                <span class="icon"><i class="fa-regular fa-clock"></i></span
+                >From 07:05AM to 19:30PM
+              </p>
+            </div>
+            <form action="#" method="post" class="inputs">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Full name"
+                  required
+                />
+                <p class="error d-none">Your name should contain at least 3 letters.</p>
+                <input
+                type="text"
+                id="inputEmail"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <p id="emailLenghtHelp" class="error d-none">Your e-mail should contain at least 5 symbols and '@'.</p>
+              <div class="button_wrapper">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="details form_button"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="small_container">
+        <div class="footer_nav">
+          <a href="#" class="logo"
+            ><img src="./assets/Logo.png" alt="logo"
+          /></a>
+          <ul class="sn_list">
+            <li class="sn_item">
+              <a href="#">
+                <svg class="facebook">
+                  <use xlink:href="./assets/sprite.svg#facebook" />
+                </svg>
+              </a>
+            </li>
+            <li class="sn_item">
+              <a href="#">
+                <svg class="twitter">
+                  <use xlink:href="./assets/sprite.svg#twitter" />
+                </svg>
+              </a>
+            </li>
+            <li class="sn_item">
+              <a href="#">
+                <svg class="instagram">
+                  <use xlink:href="./assets/sprite.svg#instagram" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="copyright">Copyrights © 2020 Montichello</p>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/lightgallery.umd.js"></script>
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
