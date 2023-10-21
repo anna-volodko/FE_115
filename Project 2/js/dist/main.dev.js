@@ -45,7 +45,7 @@ var markerIcon = L.icon({
 });
 var map = L.map("map").setView([50.57632129759722, 26.248522046659183], 12);
 map.scrollWheelZoom.disable();
-L.tileLayer("https://tile.openstreetmap.de/${z}/${x}/${y}.png", {
+L.tileLayer("https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
 }).addTo(map);
 L.marker([50.60857776230688, 26.250254239864706], {
