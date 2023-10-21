@@ -52,7 +52,7 @@ const markerIcon = L.icon({
 const map = L.map("map").setView([50.57632129759722, 26.248522046659183], 12);
 map.scrollWheelZoom.disable(); 
 
-L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png", {
+L.tileLayer("https://tile.openstreetmap.de/${z}/${x}/${y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors',
 }).addTo(map);

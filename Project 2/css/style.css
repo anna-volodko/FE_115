@@ -279,7 +279,6 @@ h2::after {
   align-items: center;
   justify-content: center;
   gap: 70px;
-  flex-wrap: wrap;
 }
 
 /*-----------------------------------NEWS-------------------------------*/
@@ -1112,5 +1111,9 @@ input[type=text]:focus {
 
   .map {
     height: 60vh;
+  }
+
+  .project_item {
+    flex-wrap: wrap;
   }
 }
