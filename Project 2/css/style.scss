@@ -892,6 +892,17 @@ input[type="text"]:focus {
     .nav_list.active {
         right: 0;
     }
+    header::after {
+        background-image: url(../assets/hero-backround-tablet.png);
+    }
+    .news::after {
+        content: "";
+        background-image: url(../assets/news_background-tablet.png);
+    }
+    footer::after {
+        content: "";
+        background-image: url(../assets/background-footer-tablet.png);
+    }
 }
 @media screen and (max-width:576px) {
     .container {
@@ -981,5 +992,16 @@ input[type="text"]:focus {
     }
     .project_item {
         flex-wrap: wrap;
+    }
+    header::after {
+        background-image: url(../assets/hero-backround-phone.png);
+    }
+    .news::after {
+        content: "";
+        background-image: url(../assets/news_background-phone.png);
+    }
+    footer::after {
+        content: "";
+        background-image: url(../assets/background-footer-phone.png);
     }
 }
