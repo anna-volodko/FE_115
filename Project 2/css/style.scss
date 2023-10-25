@@ -22,9 +22,30 @@ a {
     width: 100%;
     margin: 0 auto;
 }
+main {
+    overflow: hidden;
+}
 /*----------------------------------HERO SCREEN AND HEADER------------------------------*/
+@keyframes colorChange {
+    0% {
+      background: linear-gradient(243deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    }
+    25% {
+      background: linear-gradient(243deg, #5331ce 16.9%, #55B7FF 83.27%);
+    }
+    50% {
+      background: linear-gradient(243deg, #2aebb1 16.9%, #55B7FF 83.27%);
+    }
+    75% {
+      background: linear-gradient(243deg, #46f7a4 16.9%, #55B7FF 83.27%);
+    }
+    100% {
+      background: linear-gradient(243deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    }
+  }
 header {
     background: linear-gradient(243deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    animation: colorChange 14s infinite;
     height: 100vh;
     position: relative;
     display: flex;
@@ -32,6 +53,7 @@ header {
     justify-content:space-between;
     padding-right: 6vh;
     padding-left: 6vh;
+    transition:  colorChange 0.5s ease;
 }
 header::after {
     content: "";
@@ -128,7 +150,7 @@ h1 {
     letter-spacing: 5.4px;
     text-transform: uppercase;
 }
-.down_button {
+.down_button a{
     margin: 0 auto;
     margin-bottom: 7vh;
     width: 40px;
@@ -778,7 +800,7 @@ input[type="text"]:focus {
         font-size: 30px;
     }
     .description {
-        font-size: 12px;
+        font-size: 14px;
     }
     .location {
         font-size: 12px;
@@ -792,6 +814,15 @@ input[type="text"]:focus {
     }
     h2 {
         margin-bottom: 70px;
+    }
+    .post_name {
+        font-size: 14px;
+    }
+    .blogger_name {
+        font-size: 14px;
+    }
+    .post_date {
+        font-size: 12px;
     }
     .lightgallery {
         display: grid;
@@ -881,7 +912,7 @@ input[type="text"]:focus {
     }
     .nav_list {
         position: fixed;
-        right: -110%;
+        right: -120%;
         top: 42px;
         font-size: 12px;
         flex-direction: row;
@@ -950,9 +981,8 @@ input[type="text"]:focus {
     }
     .main_nav {
         gap: 40px;
-        padding: 15px 0 15px 30px;
-        justify-content: flex-start;
-
+        // padding: 15px 0 15px 30px;
+        justify-content: center;
     }
     h1 {
         margin-top: 30vh;
@@ -964,6 +994,7 @@ input[type="text"]:focus {
     }
     .nav_list {
         top: 80px;
+        right: -100;
         font-size: 12px;
         flex-direction: column;
         width: 100%;
@@ -975,6 +1006,7 @@ input[type="text"]:focus {
         padding-top: 40px;
         font-size: 50px;
     }
+    
     .nav_item {
 
         border-bottom: 1px solid #ffffff;

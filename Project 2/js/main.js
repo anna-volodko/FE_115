@@ -10,6 +10,7 @@ $(".hero_slider").slick({
   arrows: false,
 });
 
+
 $(".news_slider").slick({
   infinite: true,
   slidesToShow: 3,
