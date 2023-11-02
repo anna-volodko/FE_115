@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500;700&family=Source+Sans+3&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Delius+Unicase&family=Farro:wght@300&family=Francois+One&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;700&family=Lato&family=Montserrat:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,600&family=Nunito:wght@400;600&family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Phudu:wght@500&family=Poppins:wght@700&family=Prompt:wght@800&family=Quicksand:wght@500&family=Raleway:wght@400;500&family=Red+Hat+Display:wght@400;500;600&family=Roboto:wght@400;500;700&family=Source+Sans+3&family=Staatliches&family=Tilt+Prism&family=Tourney:wght@600&family=Train+One&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>MOVIE SEARCH BAR</h1>
+        <h2>Discover, find, watch, and create with thousands of films in one
+            place.</h2>
+      </section>
+      <section class="search">
+        <div>
+          <div class="inputs">
+            <input
+              class="searchText"
+              type="text"
+              placeholder="Enter your movie name"
+              id="searchText"
+            />
+            <button
+              type="button"
+              id="btn_search"
+              class="search_button"
+              onclick="searchMovies()"
+            >
+              <img src="./assets/search.svg" alt="search-button" />
+            </button>
+          </div>
+          <div class="radios">
+            <input
+              type="radio"
+              class="radio"
+              name="type"
+              id="movie"
+              autocomplete="off"
+              checked
+            />
+            <label class="radio_label" for="movie">Movie</label>
+            <input
+              type="radio"
+              class="radio"
+              name="type"
+              id="series"
+              autocomplete="off"
+            />
+            <label class="radio_label" for="series">Series</label>
+            <input
+              type="radio"
+              class="radio"
+              name="type"
+              id="episode"
+              autocomplete="off"
+            />
+            <label class="radio_label" for="episode">Episode</label>
+          </div>
+        </div>
+        <div id="movie_list"></div>
+        <ul class="pagination nav_bottom">
+            <li class="page-item"><a class="page-link" href="first">First</a></li>
+            <li class="page-item"><a class="page-link" href="prev">Prev</a></li>
+            <li class="page-item"><a class="page-link" href="page" id="page"></a></li>
+            <li class="page-item"><a class="page-link" href="next" onclick="nextPage(event)">Next</a></li>
+            <li class="page-item"><a class="page-link" href="last" onclick="goToEnd(event)">Last</a></li>
+        </ul>
+      </section>
+    </main>
+    <script src="./js/axios.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
