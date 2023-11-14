@@ -88,7 +88,7 @@ body {
   color: #ffe0e9;
 }
 
-.nav_item {
+.nav_item, .nav_button {
   padding: 12px 16px;
   border-radius: 8px;
   font-size: 20px;
@@ -96,8 +96,19 @@ body {
   font-weight: 400;
   line-height: 150%;
 }
-.nav_item:hover {
+.nav_item:hover, .nav_button:hover {
   background-color: #313131;
+}
+
+.nav_button {
+  display: flex;
+  align-items: center;
+  background-color: #ff9aab;
+  color: #313131;
+  margin-left: 10px;
+}
+.nav_button:hover {
+  color: #ffe0e9;
 }
 
 .hamburger {
@@ -112,10 +123,8 @@ header {
   z-index: 1;
 }
 
-.nav_buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.icon_search {
+  margin-right: 10px;
 }
 
 /*-------------------------------------------HERO------------------------------*/
